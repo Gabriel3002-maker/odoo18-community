@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Vista de Lista (Tree) -->
+        <record id="ganaderia_animal_list_view" model="ir.ui.view">
+            <field name="name">ganaderia.animal.tree</field>
+            <field name="model">ganaderia.animal</field>
+            <field name="arch" type="xml">
+                <tree string="Animales">
+                    <field name="name"/>
+                    <field name="specie"/>
+                    <field name="birth_date"/>
+                    <field name="weight"/>
+                    <field name="health_status"/>
+                    <field name="use"/>
+                    <field name="sold"/>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Vista de Formulario (Form) -->
+        <record id="ganaderia_animal_form_view" model="ir.ui.view">
+            <field name="name">ganaderia.animal.form</field>
+            <field name="model">ganaderia.animal</field>
+            <field name="arch" type="xml">
+                <form string="Animal">
+                    <group>
+                        <field name="name"/>
+                        <field name="specie"/>
+                        <field name="birth_date"/>
+                        <field name="breed"/>
+                        <field name="weight"/>
+                        <field name="photo"/>
+                        <field name="health_status"/>
+                        <field name="diseases"/>
+                        <field name="last_disease_date"/>
+                        <field name="inseminated"/>
+                        <field name="insemination_date"/>
+                        <field name="offspring_count"/>
+                        <field name="use"/>
+                        <field name="sold"/>
+                        <field name="sale_date"/>
+                        <field name="sale_price"/>
+                        <field name="owner"/>
+                    </group>
+
+                    <!-- Historial de Pesos -->
+                    <notebook>
+                        <page string="Historial de Peso">
+                            <field name="weight_history_ids">
+                                <tree>
+                                    <field name="date"/>
+                                    <field name="weight"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </form>
+            </field>
+        </record>
+    </data>
+</odoo>

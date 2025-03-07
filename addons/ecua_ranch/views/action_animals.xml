@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Acción: Listado de Animales -->
+        <record id="action_animals_list" model="ir.actions.act_window">
+            <field name="name">Listado de Animales</field>
+            <field name="res_model">ganaderia.animal</field>
+            <field name="view_mode">tree,form</field>
+            <field name="target">current</field>
+        </record>
+
+        <!-- Acción: Crear Animal -->
+        <record id="action_animals_create" model="ir.actions.act_window">
+            <field name="name">Crear Animal</field>
+            <field name="res_model">ganaderia.animal</field>
+            <field name="view_mode">form</field>
+            <field name="target">current</field>
+        </record>
+    </data>
+</odoo>

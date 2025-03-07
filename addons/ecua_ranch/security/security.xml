@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Definir el grupo de usuarios que tendrá acceso a los modelos de ganadería -->
+    <record id="group_inventory_user" model="res.groups">
+        <field name="name">Inventory User</field>
+        <field name="category_id" ref="base.module_category_inventory"/>
+    </record>
+
+    <!-- Definir los permisos de acceso para el modelo 'ganaderia.animal' -->
+    <record id="ir_model_access_ganaderia_animal" model="ir.model.access">
+        <field name="name">ganaderia.animal access</field>
+        <field name="model_id" ref="model_ganaderia_animal"/>
+        <field name="group_id" ref="group_inventory_user"/>
+        <field name="perm_read" eval="1"/>
+        <field name="perm_write" eval="1"/>
+        <field name="perm_create" eval="1"/>
+        <field name="perm_unlink" eval="1"/>
+    </record>
+</odoo>

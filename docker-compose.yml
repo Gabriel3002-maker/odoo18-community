@@ -10,7 +10,7 @@ services:
     volumes:
       - ./addons:/mnt/extra-addons
       - ./odoo-addon-custom:/mnt/odoo-addon-custom
-      - ./odoo.conf:/etc/odoo/odoo.conf
+      - ./config/odoo.conf:/etc/odoo/odoo.conf
     environment:
       - DB_HOST=db
       - DB_PORT=5433  

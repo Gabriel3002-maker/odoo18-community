@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Menú Principal: EcuaRanch -->
+        <menuitem id="menu_ecuaranch_root"
+                  name="EcuaRanch"
+                  sequence="1"
+                  parent="stock.menu_stock_root"/>  <!-- Añadido al menú de Inventario -->
+
+        <!-- Submenú: Animales -->
+        <menuitem id="menu_ecuaranch_animals"
+                  name="Animales"
+                  parent="menu_ecuaranch_root"
+                  sequence="2"/>
+
+        <!-- Opción: Listado de Animales -->
+        <menuitem id="menu_animals_list"
+                  name="Listado de Animales"
+                  parent="menu_ecuaranch_animals"
+                  action="action_animals_list"
+                  sequence="1"/>
+
+        <!-- Opción: Crear Animal -->
+        <menuitem id="menu_animals_create"
+                  name="Crear Animal"
+                  parent="menu_ecuaranch_animals"
+                  action="action_animals_create"
+                  sequence="2"/>
+    </data>
+</odoo>
